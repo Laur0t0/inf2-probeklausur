@@ -3,9 +3,19 @@
  */
 
 #include "aufgabe_4.h"
+#include <algorithm>
 
 bool same_elements(std::vector<int> a, std::vector<int> b) {
-  // TODO
+  if (a.size() != b.size()) {
+    return false;
+  }
+  std::sort(a.begin(), a.end());
+  std::sort(b.begin(), b.end());
+  for (int i = 0; i < a.size(); i++) {
+    if (a[i] != b[i]) {
+      return false;
+    }
+  }
   return true;
 }
 

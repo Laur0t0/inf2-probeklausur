@@ -5,7 +5,11 @@
 #include "aufgabe_1.h"
 
 bool is_sorted_ascending(std::vector<int> const& v) {
-  // TODO
+  for (int i = 0; i < v.size(); i++) {
+    if (v[i - 1] > v[i]) {
+      return false;
+    }
+  }
   return true;
 }
 

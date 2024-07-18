@@ -6,7 +6,7 @@
 
 std::string mtknr() {
   // Bitte ersetzen Sie die Zahl 1234567 durch Ihre Matrikelnummer.
-  return "1234567";
+  return "3449958";
 }
 
 TEST_CASE("mtknr_geaendert") { CHECK(mtknr() != "1234567"); }

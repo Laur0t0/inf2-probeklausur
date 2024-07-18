@@ -5,8 +5,11 @@
 #include "aufgabe_2.h"
 
 size_t Element::length() {
-  // TODO
-  return 0;
+  if (is_empty()) {
+    return 0;
+  }else {
+    return 1 + next ->length();
+  }
 }
 
 TEST_CASE("leere_liste") {

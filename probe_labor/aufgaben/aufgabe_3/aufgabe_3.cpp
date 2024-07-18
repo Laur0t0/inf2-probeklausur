@@ -3,10 +3,17 @@
  */
 
 #include "aufgabe_3.h"
+#include <vector>
 
 std::vector<int> Element::values() {
-  // TODO
-  return {};
+  if (is_empty()) {
+    return {};
+  }
+  std::vector<int> result = {value};
+  for (auto v : next->values()) {
+    result.push_back(v);
+  }
+  return result;
 }
 
 TEST_CASE("leere_liste") {

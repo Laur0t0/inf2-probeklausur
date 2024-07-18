@@ -6,6 +6,7 @@
 #include <vector>
 
 std::vector<int> Element::values() {
+  //Variante 1
   if (is_empty()) {
     return {};
   }
@@ -14,6 +15,14 @@ std::vector<int> Element::values() {
     result.push_back(v);
   }
   return result;
+
+  // //Finns Variante - andersrum
+  // if (is_empty()){
+  //   return {};
+  // }
+  // std::vector<int> result = next->values();
+  // result.emplace(result.begin(),value);
+  // return result;
 }
 
 TEST_CASE("leere_liste") {
